@@ -48,3 +48,26 @@ Result
 ```python
 flattened = [1, 2, 3, 4, 5, 6]
 ```
+
+### Set comprehension
+
+For loop:
+```python
+words = ["Hi", "this", "is", "an", "example"]
+
+first_letters = set()
+for w in words:
+    first_letters.add(w[0])
+```
+
+List comprehension:
+```python
+words = ["Hi", "this", "is", "an", "example"]
+
+first_letters = {w[0] for w in words}
+```
+
+Result
+```python
+first_letters = {'H', 'i', 'e', 'a', 't'}
+```
