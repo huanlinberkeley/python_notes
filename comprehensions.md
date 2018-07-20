@@ -1,7 +1,7 @@
-### List Comprehensions
+# List Comprehensions
 Source: [Python List Comprehensions: Explained Visually](http://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/) by Trey Hunner
 
-- Conditional list comprehension
+### Conditional loop list comprehension
 
 For loop:
 ```python
@@ -23,4 +23,28 @@ doubled_odds = [n * 2 for n in numbers if n % 2 == 1]
 Result
 ```python
 double_odds = [2, 6, 10]
+```
+
+### Nested loop list comprehension
+
+For loop:
+```python
+matrix = [[1, 2], [3, 4], [5, 6]]
+
+flattened = []
+for row in matrix:
+    for n in row:
+        flattened.append(n)
+```
+
+List comprehension:
+```python
+matrix = [[1, 2], [3, 4], [5, 6]]
+
+flattened = [n for row in matrix for n in row]
+```
+
+Result
+```python
+flattened = [1, 2, 3, 4, 5, 6]
 ```
