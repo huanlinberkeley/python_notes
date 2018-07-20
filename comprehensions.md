@@ -71,3 +71,27 @@ Result
 ```python
 first_letters = {'H', 'i', 'e', 'a', 't'}
 ```
+
+### Dictionary comprehension
+
+For loop:
+```python
+original = {'k1':'v1', 'k2':'v2'}
+
+flipped = {}
+for key, value in original.items():
+    flipped[value] = key
+```
+
+List comprehension:
+```python
+original = {'k1':'v1', 'k2':'v2'}
+
+flipped = {value: key for key, value in original.items()}
+```
+
+Result
+```python
+flipped = {'v1':'k1', 'v2':'k2'}
+```
+
